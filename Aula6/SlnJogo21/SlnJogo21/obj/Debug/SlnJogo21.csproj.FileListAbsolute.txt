@@ -1,0 +1,8 @@
+C:\devsblu2\Aula6\SlnJogo21\SlnJogo21\bin\Debug\SlnJogo21.exe.config
+C:\devsblu2\Aula6\SlnJogo21\SlnJogo21\bin\Debug\SlnJogo21.exe
+C:\devsblu2\Aula6\SlnJogo21\SlnJogo21\bin\Debug\SlnJogo21.pdb
+C:\devsblu2\Aula6\SlnJogo21\SlnJogo21\obj\Debug\SlnJogo21.csproj.AssemblyReference.cache
+C:\devsblu2\Aula6\SlnJogo21\SlnJogo21\obj\Debug\SlnJogo21.csproj.SuggestedBindingRedirects.cache
+C:\devsblu2\Aula6\SlnJogo21\SlnJogo21\obj\Debug\SlnJogo21.csproj.CoreCompileInputs.cache
+C:\devsblu2\Aula6\SlnJogo21\SlnJogo21\obj\Debug\SlnJogo21.exe
+C:\devsblu2\Aula6\SlnJogo21\SlnJogo21\obj\Debug\SlnJogo21.pdb
