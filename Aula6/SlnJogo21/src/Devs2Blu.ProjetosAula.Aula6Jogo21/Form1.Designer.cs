@@ -1,6 +1,6 @@
 ﻿namespace Devs2Blu.ProjetosAula.Aula6Jogo21
 {
-    partial class Form1
+    partial class FormProjetoAulaDevs2BluJogo21
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -106,6 +106,7 @@
             this.buttonPlayer1Ok.TabIndex = 1;
             this.buttonPlayer1Ok.Text = "Ok";
             this.buttonPlayer1Ok.UseVisualStyleBackColor = false;
+            this.buttonPlayer1Ok.Click += new System.EventHandler(this.buttonPlayer1Ok_Click);
             // 
             // textBoxPlayer1
             // 
@@ -186,7 +187,7 @@
             this.buttonTabuleiroNovoJogo.Text = "Novo Jogo";
             this.buttonTabuleiroNovoJogo.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FormProjetoAulaDevs2BluJogo21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,8 +199,9 @@
             this.Controls.Add(this.groupBoxPlayer1);
             this.Controls.Add(this.groupBoxTabuleiro);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form1";
+            this.Name = "FormProjetoAulaDevs2BluJogo21";
             this.Text = "Projeto Aula Devs2Blu Jogo 21 ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxTabuleiro.ResumeLayout(false);
             this.groupBoxTabuleiro.PerformLayout();
             this.groupBoxPlayer1.ResumeLayout(false);
