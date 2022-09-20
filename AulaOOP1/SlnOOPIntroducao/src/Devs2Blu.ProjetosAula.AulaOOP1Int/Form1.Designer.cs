@@ -30,6 +30,8 @@
         {
             this.groupBoxCadastroDeFuncionario = new System.Windows.Forms.GroupBox();
             this.groupBoxTipoDeFuncionario = new System.Windows.Forms.GroupBox();
+            this.radioButtonDiretor = new System.Windows.Forms.RadioButton();
+            this.radioButtonRecepcionista = new System.Windows.Forms.RadioButton();
             this.labelAnos = new System.Windows.Forms.Label();
             this.textBoxEndereco = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -40,14 +42,10 @@
             this.labelNascimento = new System.Windows.Forms.Label();
             this.labelNome = new System.Windows.Forms.Label();
             this.groupBoxControles = new System.Windows.Forms.GroupBox();
+            this.buttonLimpar = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
             this.groupBoxStatus = new System.Windows.Forms.GroupBox();
             this.groupBoxStatusCadastroFuncionarios = new System.Windows.Forms.GroupBox();
-            this.buttonSalvar = new System.Windows.Forms.Button();
-            this.buttonLimpar = new System.Windows.Forms.Button();
-            this.radioButtonPessoa = new System.Windows.Forms.RadioButton();
-            this.radioButtonRecepcionista = new System.Windows.Forms.RadioButton();
-            this.radioButtonDiretor = new System.Windows.Forms.RadioButton();
-            this.buttonOk = new System.Windows.Forms.Button();
             this.textBoxCadastroFuncionario = new System.Windows.Forms.TextBox();
             this.groupBoxCadastroDeFuncionario.SuspendLayout();
             this.groupBoxTipoDeFuncionario.SuspendLayout();
@@ -81,7 +79,6 @@
             this.groupBoxTipoDeFuncionario.BackColor = System.Drawing.Color.Gray;
             this.groupBoxTipoDeFuncionario.Controls.Add(this.radioButtonDiretor);
             this.groupBoxTipoDeFuncionario.Controls.Add(this.radioButtonRecepcionista);
-            this.groupBoxTipoDeFuncionario.Controls.Add(this.radioButtonPessoa);
             this.groupBoxTipoDeFuncionario.ForeColor = System.Drawing.Color.White;
             this.groupBoxTipoDeFuncionario.Location = new System.Drawing.Point(22, 188);
             this.groupBoxTipoDeFuncionario.Name = "groupBoxTipoDeFuncionario";
@@ -89,6 +86,30 @@
             this.groupBoxTipoDeFuncionario.TabIndex = 9;
             this.groupBoxTipoDeFuncionario.TabStop = false;
             this.groupBoxTipoDeFuncionario.Text = "Tipo de Funcionário";
+            // 
+            // radioButtonDiretor
+            // 
+            this.radioButtonDiretor.AutoSize = true;
+            this.radioButtonDiretor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDiretor.Location = new System.Drawing.Point(182, 39);
+            this.radioButtonDiretor.Name = "radioButtonDiretor";
+            this.radioButtonDiretor.Size = new System.Drawing.Size(63, 17);
+            this.radioButtonDiretor.TabIndex = 3;
+            this.radioButtonDiretor.TabStop = true;
+            this.radioButtonDiretor.Text = "Diretor";
+            this.radioButtonDiretor.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonRecepcionista
+            // 
+            this.radioButtonRecepcionista.AutoSize = true;
+            this.radioButtonRecepcionista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonRecepcionista.Location = new System.Drawing.Point(17, 39);
+            this.radioButtonRecepcionista.Name = "radioButtonRecepcionista";
+            this.radioButtonRecepcionista.Size = new System.Drawing.Size(106, 17);
+            this.radioButtonRecepcionista.TabIndex = 2;
+            this.radioButtonRecepcionista.TabStop = true;
+            this.radioButtonRecepcionista.Text = "Recepcionista";
+            this.radioButtonRecepcionista.UseVisualStyleBackColor = true;
             // 
             // labelAnos
             // 
@@ -168,7 +189,6 @@
             // groupBoxControles
             // 
             this.groupBoxControles.BackColor = System.Drawing.Color.Gray;
-            this.groupBoxControles.Controls.Add(this.buttonOk);
             this.groupBoxControles.Controls.Add(this.buttonLimpar);
             this.groupBoxControles.Controls.Add(this.buttonSalvar);
             this.groupBoxControles.ForeColor = System.Drawing.Color.White;
@@ -178,6 +198,32 @@
             this.groupBoxControles.TabIndex = 1;
             this.groupBoxControles.TabStop = false;
             this.groupBoxControles.Text = "Controles";
+            // 
+            // buttonLimpar
+            // 
+            this.buttonLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLimpar.ForeColor = System.Drawing.Color.White;
+            this.buttonLimpar.Location = new System.Drawing.Point(21, 84);
+            this.buttonLimpar.Name = "buttonLimpar";
+            this.buttonLimpar.Size = new System.Drawing.Size(192, 37);
+            this.buttonLimpar.TabIndex = 1;
+            this.buttonLimpar.Text = "Limpar";
+            this.buttonLimpar.UseVisualStyleBackColor = false;
+            this.buttonLimpar.Click += new System.EventHandler(this.buttonLimpar_Click);
+            // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.ForeColor = System.Drawing.Color.White;
+            this.buttonSalvar.Location = new System.Drawing.Point(21, 33);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(192, 36);
+            this.buttonSalvar.TabIndex = 0;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = false;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // groupBoxStatus
             // 
@@ -202,80 +248,6 @@
             this.groupBoxStatusCadastroFuncionarios.TabIndex = 0;
             this.groupBoxStatusCadastroFuncionarios.TabStop = false;
             this.groupBoxStatusCadastroFuncionarios.Text = "Cadastro de Funcionarios";
-            // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.ForeColor = System.Drawing.Color.White;
-            this.buttonSalvar.Location = new System.Drawing.Point(21, 103);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(192, 36);
-            this.buttonSalvar.TabIndex = 0;
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = false;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
-            // 
-            // buttonLimpar
-            // 
-            this.buttonLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLimpar.ForeColor = System.Drawing.Color.White;
-            this.buttonLimpar.Location = new System.Drawing.Point(21, 60);
-            this.buttonLimpar.Name = "buttonLimpar";
-            this.buttonLimpar.Size = new System.Drawing.Size(192, 37);
-            this.buttonLimpar.TabIndex = 1;
-            this.buttonLimpar.Text = "Limpar";
-            this.buttonLimpar.UseVisualStyleBackColor = false;
-            this.buttonLimpar.Click += new System.EventHandler(this.buttonLimpar_Click);
-            // 
-            // radioButtonPessoa
-            // 
-            this.radioButtonPessoa.AutoSize = true;
-            this.radioButtonPessoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonPessoa.Location = new System.Drawing.Point(27, 27);
-            this.radioButtonPessoa.Name = "radioButtonPessoa";
-            this.radioButtonPessoa.Size = new System.Drawing.Size(66, 17);
-            this.radioButtonPessoa.TabIndex = 1;
-            this.radioButtonPessoa.TabStop = true;
-            this.radioButtonPessoa.Text = "Pessoa";
-            this.radioButtonPessoa.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonRecepcionista
-            // 
-            this.radioButtonRecepcionista.AutoSize = true;
-            this.radioButtonRecepcionista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonRecepcionista.Location = new System.Drawing.Point(27, 62);
-            this.radioButtonRecepcionista.Name = "radioButtonRecepcionista";
-            this.radioButtonRecepcionista.Size = new System.Drawing.Size(106, 17);
-            this.radioButtonRecepcionista.TabIndex = 2;
-            this.radioButtonRecepcionista.TabStop = true;
-            this.radioButtonRecepcionista.Text = "Recepcionista";
-            this.radioButtonRecepcionista.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonDiretor
-            // 
-            this.radioButtonDiretor.AutoSize = true;
-            this.radioButtonDiretor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonDiretor.Location = new System.Drawing.Point(27, 100);
-            this.radioButtonDiretor.Name = "radioButtonDiretor";
-            this.radioButtonDiretor.Size = new System.Drawing.Size(63, 17);
-            this.radioButtonDiretor.TabIndex = 3;
-            this.radioButtonDiretor.TabStop = true;
-            this.radioButtonDiretor.Text = "Diretor";
-            this.radioButtonDiretor.UseVisualStyleBackColor = true;
-            // 
-            // buttonOk
-            // 
-            this.buttonOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.buttonOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOk.Location = new System.Drawing.Point(21, 19);
-            this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(192, 35);
-            this.buttonOk.TabIndex = 2;
-            this.buttonOk.Text = "OK";
-            this.buttonOk.UseVisualStyleBackColor = false;
-            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // textBoxCadastroFuncionario
             // 
@@ -332,8 +304,6 @@
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.RadioButton radioButtonDiretor;
         private System.Windows.Forms.RadioButton radioButtonRecepcionista;
-        private System.Windows.Forms.RadioButton radioButtonPessoa;
-        private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.TextBox textBoxCadastroFuncionario;
     }
 }

@@ -24,26 +24,7 @@ namespace Devs2Blu.ProjetosAula.AulaOOP1Int
         {
             RecepcionistasList = new List<Recepcionista>();
             DiretorList = new List<Diretor>();  
-        }
-
-        private void buttonOk_Click(object sender, EventArgs e)
-        {
-            if (radioButtonDiretor.Checked)
-            {
-                textBoxCadastroFuncionario.Text += "Tipo = Diretor\r\n";
-                textBoxCadastroFuncionario.Text += $"Nome = {textBoxNome.Text} {textBoxSobreNome.Text}\r\n";
-                textBoxCadastroFuncionario.Text += $"Nascido = {textBoxNascimento.Text}\r\n";
-                textBoxCadastroFuncionario.Text += $"Endereço = {textBoxEndereco.Text}\r\n";
-            }
-            else if (radioButtonRecepcionista.Checked)
-            {
-                textBoxCadastroFuncionario.Text += "Tipo = Recepcionista\r\n";
-                textBoxCadastroFuncionario.Text += $"Nome = {textBoxNome.Text} {textBoxSobreNome.Text}\r\n";
-                textBoxCadastroFuncionario.Text += $"Nascido = {textBoxNascimento.Text}\r\n";
-                textBoxCadastroFuncionario.Text += $"Endereço = {textBoxEndereco.Text}\r\n";
-            }
-           
-        }
+        }     
 
         private void buttonLimpar_Click(object sender, EventArgs e)
         {
@@ -51,7 +32,6 @@ namespace Devs2Blu.ProjetosAula.AulaOOP1Int
             textBoxSobreNome.Text = "";
             textBoxNascimento.Text = "";
             textBoxEndereco.Text = "";
-            radioButtonPessoa.Checked = false;
             radioButtonDiretor.Checked = false;
             radioButtonRecepcionista.Checked = false;
         }
