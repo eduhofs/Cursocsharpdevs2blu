@@ -16,39 +16,59 @@ namespace Devs2Blu.ProjetosAula.Aula6Jogo21
 
         public int PontuacaoPlayer1 { get; set; } = 0;
         public int PontuacaoPlayer2 { get; set; } = 0;
-
         public int Jogada { get; set; } = 0;
+
         public FormProjetoAulaDevs2BluJogo21()
         {
             InitializeComponent();
-            textBoxTabuleiro.Text = "Bem Vindo!\r\n";
-            textBoxTabuleiro.Text += "Aperte Iniciar para começar\r\n";
         }
-
-        private void textBoxTabuleiro_TextChanged(object sender, EventArgs e)
-        {  
-           
+        #region Eventos
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBoxTabuleiro.Text = "Bem Vindo!\r\n";
+            textBoxTabuleiro.Text += "Player1 aperte Iniciar para começar\r\n";
         }
 
         private void buttonTabuleiroIniciar_Click(object sender, EventArgs e)
         {
             textBoxPlayer1.Text += "Faça sua aposta de 1 á 20 e de um Ok\r\n";
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonPlayer1Ok_Click(object sender, EventArgs e)
         {
-            int numAposta;
-            int.TryParse(textBoxPlayer1Entrada.Text, out numAposta);
+            Player1Jogando();
+        }
+
+        private void buttonTabuleiroNovoJogo_Click(object sender, EventArgs e)
+        {
+            NovoJogo();
+        }
+
+        #endregion
+
+        #region Metodos
+
+        private void NovoJogo()
+        {
+            textBoxTabuleiro.Text = "";
+            textBoxPlayer1.Text = "";
+            textBoxPlayer2.Text = "";
+
+            PontuacaoPlayer1 = 0;
+            PontuacaoPlayer2 = 0;
+            Jogada = 0;
+
+            textBoxTabuleiro.Text += "Player1 aperte Iniciar para começar\r\n";
+            textBoxPlayer1.Text += "Faça sua aposta de 1 á 20 e de um Ok\r\n";
+        }
+
+        private void Player1Jogando()
+        {
+            int.TryParse(textBoxPlayer1Entrada.Text, out int numAposta);
             int pontuacaoPlayer1 = ChecandoPontuacao(numAposta);
             PontuacaoPlayer1 += pontuacaoPlayer1;
 
-            textBoxPlayer1.Text += $"Vc fez {pontuacaoPlayer1.ToString()}pts.\r\n";
+            textBoxPlayer1.Text += $"Vc fez {pontuacaoPlayer1.ToString()} pts.\r\n";
             textBoxTabuleiro.Text += $"Player1 tem {PontuacaoPlayer1.ToString()} pontos.\r\n";
             Jogada += 1;
             ChecandoRodada();
@@ -142,8 +162,9 @@ namespace Devs2Blu.ProjetosAula.Aula6Jogo21
                 textBoxPlayer2.Text += "Vc Venceu!\r\n";
                 textBoxTabuleiro.Text += "Player2 Venceu!\r\n";
             }
-            Thread.Sleep(10000);
-            Application.Exit();
         }
+
+
+        #endregion
     }
 }

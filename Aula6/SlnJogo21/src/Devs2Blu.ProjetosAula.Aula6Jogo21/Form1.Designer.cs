@@ -60,7 +60,6 @@
             // 
             // textBoxTabuleiro
             // 
-            this.textBoxTabuleiro.Enabled = false;
             this.textBoxTabuleiro.Location = new System.Drawing.Point(47, 34);
             this.textBoxTabuleiro.Multiline = true;
             this.textBoxTabuleiro.Name = "textBoxTabuleiro";
@@ -68,7 +67,6 @@
             this.textBoxTabuleiro.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxTabuleiro.Size = new System.Drawing.Size(508, 106);
             this.textBoxTabuleiro.TabIndex = 0;
-            this.textBoxTabuleiro.TextChanged += new System.EventHandler(this.textBoxTabuleiro_TextChanged);
             // 
             // groupBoxPlayer1
             // 
@@ -110,7 +108,6 @@
             // 
             // textBoxPlayer1
             // 
-            this.textBoxPlayer1.Enabled = false;
             this.textBoxPlayer1.Location = new System.Drawing.Point(21, 19);
             this.textBoxPlayer1.Multiline = true;
             this.textBoxPlayer1.Name = "textBoxPlayer1";
@@ -158,7 +155,6 @@
             // 
             // textBoxPlayer2
             // 
-            this.textBoxPlayer2.Enabled = false;
             this.textBoxPlayer2.Location = new System.Drawing.Point(21, 19);
             this.textBoxPlayer2.Multiline = true;
             this.textBoxPlayer2.Name = "textBoxPlayer2";
@@ -186,6 +182,7 @@
             this.buttonTabuleiroNovoJogo.TabIndex = 4;
             this.buttonTabuleiroNovoJogo.Text = "Novo Jogo";
             this.buttonTabuleiroNovoJogo.UseVisualStyleBackColor = true;
+            this.buttonTabuleiroNovoJogo.Click += new System.EventHandler(this.buttonTabuleiroNovoJogo_Click);
             // 
             // FormProjetoAulaDevs2BluJogo21
             // 
