@@ -27,6 +27,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Utils
         public void CargaMock()
         {
             CargaPacientes();
+            CargaMedicos();
         }
         public void CargaPacientes()
         {
@@ -35,6 +36,18 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Utils
                 Paciente paciente = new Paciente(i, $"Paciente {i}", $"{i}23{i}56{i}891{i}", "Unimed");
                 ListaPacientes.Add(paciente);
             }
+        }
+
+        public void CargaMedicos()
+        {
+            Random rd = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                string especialidade = (i % 2 == 0) ? "Unha Encravada" : "Dor no Pé";
+                Medico medico = new Medico(i+33, $"Médico {i}", $"{i}35{i}65{i}198{i}", rd.Next(123456, 987987), especialidade);
+                ListaMedicos.Add(medico);
+            }
+            
         }
 
     }
