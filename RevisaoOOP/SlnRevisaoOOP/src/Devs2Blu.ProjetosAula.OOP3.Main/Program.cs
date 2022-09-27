@@ -20,6 +20,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main
             Mock = new Mocks();
             do
             {
+                Console.Clear();
                 Console.WriteLine("----- Sistema de Gerenciamento de Clinícas -----");
                 Console.WriteLine("----- 10-Cadastro de Pacientes -----");
                 Console.WriteLine("----- 20-Cadastro de Médicos -----");
@@ -37,11 +38,15 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main
                 {
                     case (int)MenuEnums.CAD_PAC:
                         CadastroPaciente ModuloCadastroPacientes = new CadastroPaciente();
-                        ModuloCadastroPacientes.MenuCadastro(Mock);
+                        ModuloCadastroPacientes.MenuCadastro();
                         break;
                     case (int)MenuEnums.CAD_MED:
                         CadastroMedico ModuloCadastroMedicos = new CadastroMedico();
-                        ModuloCadastroMedicos.MenuCadastro(Mock);
+                        ModuloCadastroMedicos.MenuCadastro();
+                        break;
+                    case (int)MenuEnums.CAD_REC:
+                        CadastroRecepcionista ModuloCadastroRecepcionistas = new CadastroRecepcionista();
+                        ModuloCadastroRecepcionistas.MenuCadastro();
                         break;
 
                     default:

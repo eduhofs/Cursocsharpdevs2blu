@@ -28,12 +28,13 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Utils
         {
             CargaPacientes();
             CargaMedicos();
+            CargaRecepcionistas();
         }
         public void CargaPacientes()
         {
             for (int i = 0; i < 10; i++)
             {
-                Paciente paciente = new Paciente(i, $"Paciente {i}", $"{i}23{i}56{i}891{i}", "Unimed");
+                Paciente paciente = new Paciente(i, $"Paciente {i+2}", $"{i}23{i}56{i}891{i}", "Unimed");
                 ListaPacientes.Add(paciente);
             }
         }
@@ -41,13 +42,25 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Utils
         public void CargaMedicos()
         {
             Random rd = new Random();
-            for (int i = 0; i < 10; i++)
+            String[] especialidade = { "Clínico", "Neurologista", "Ginicologista", "Pediatra"};
+            for (int i = 0; i < 4; i++)
             {
-                string especialidade = (i % 2 == 0) ? "Unha Encravada" : "Dor no Pé";
-                Medico medico = new Medico(i+33, $"Médico {i}", $"{i}35{i}65{i}198{i}", rd.Next(123456, 987987), especialidade);
+                Medico medico = new Medico(i+33, $"Médico {i+rd.Next(0, 5)}", $"{i}35{i}65{i}198{i}", rd.Next(123456, 987987), especialidade[rd.Next(0, 3)]);
                 ListaMedicos.Add(medico);
             }
             
+        }
+
+        public void CargaRecepcionistas()
+        {
+            Random rd = new Random();
+            String[] setor = { "Ala Clínica", "Neurologia", "Ginicologia", "Pediatria" };
+            for (int i = 0; i < 4; i++)
+            {
+                Recepcionista recepcionista = new Recepcionista(i + 33, $"Recepcionista {i + rd.Next(0, 5)}", $"{i}35{i}65{i}198{i}", setor[rd.Next(0, 3)]);
+                ListaRecepcionistas.Add(recepcionista);
+            }
+
         }
 
     }

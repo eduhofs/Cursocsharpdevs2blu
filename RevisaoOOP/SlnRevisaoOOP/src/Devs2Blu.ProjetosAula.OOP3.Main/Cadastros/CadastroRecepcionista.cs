@@ -1,5 +1,4 @@
 ﻿using Devs2Blu.ProjetosAula.OOP3.Main.Utils.Enums;
-using Devs2Blu.ProjetosAula.OOP3.Main.Utils;
 using Devs2Blu.ProjetosAula.OOP3.Models;
 using System;
 using System.Collections.Generic;
@@ -9,11 +8,8 @@ using System.Threading.Tasks;
 
 namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 {
-    public class CadastroMedico
+    public class CadastroRecepcionista
     {
-
-        public CadastroMedico() { }
-
         public void MenuCadastro()
         {
             Int32 opcao = 0;
@@ -21,26 +17,26 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             do
             {
                 Console.Clear();
-                Console.WriteLine("----- Cadastro de Médico -----");
-                Console.WriteLine("----- 1- Lista de Médico -----");
-                Console.WriteLine("----- 2- Cadastro de Médico -----");
-                Console.WriteLine("----- 3- Alterar Médico -----");
+                Console.WriteLine("----- Cadastro de Recepcionistas -----");
+                Console.WriteLine("----- 1- Lista de Recepcionistas -----");
+                Console.WriteLine("----- 2- Cadastro de Recepcionistas -----");
+                Console.WriteLine("----- 3- Alterar Recepcionistas -----");
                 Console.WriteLine("------ 0 - Sair ------\n");
                 Int32.TryParse(Console.ReadLine(), out opcao);
 
                 switch (opcao)
                 {
                     case (int)MenuEnums.LISTAR:
-                        ListarMedicos();
+                        ListarRecepcionistas();
                         break;
                     case (int)MenuEnums.CADASTRAR:
-                        CadastrarMedico();
+                        CadastrarRecepcionistas();
                         break;
                     case (int)MenuEnums.ALTERAR:
-                        AlterarMedico();
+                        AlterarRecepcionistas();
                         break;
                     case (int)MenuEnums.EXCLUIR:
-                        ExcluirMedico();
+                        ExcluirRecepcionistas();
                         break;
                     default:
                         break;
@@ -49,34 +45,32 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             } while (!opcao.Equals((int)MenuEnums.SAIR));
         }
 
-        public void ListarMedicos()
+        public void ListarRecepcionistas()
         {
             Console.Clear();
 
-            foreach (Medico medico in Program.Mock.ListaMedicos)
+            foreach (Recepcionista recepcionista in Program.Mock.ListaRecepcionistas)
             {
                 Console.WriteLine("----------------------------------------\n");
-                Console.WriteLine($"Médico: {medico.CodigoMedico}");
-                Console.WriteLine($"Nome: {medico.Nome}");
-                Console.WriteLine($"Cpf: {medico.CGCCPF}");
-                Console.WriteLine($"CRM: {medico.CRM}");
-                Console.WriteLine($"Especialidade: {medico.Especialidade}");
+                Console.WriteLine($"Recepcionista: {recepcionista.CodigoRecepcionista}");
+                Console.WriteLine($"Nome: {recepcionista.Nome}");
+                Console.WriteLine($"Cpf: {recepcionista.CGCCPF}");
+                Console.WriteLine($"Setor: {recepcionista.Setor}");
                 Console.WriteLine("----------------------------------------\n");
             }
             Console.ReadLine();
         }
-        public void CadastrarMedico()
+        public void CadastrarRecepcionistas()
         {
 
         }
-        public void AlterarMedico()
+        public void AlterarRecepcionistas()
         {
 
         }
-        public void ExcluirMedico()
+        public void ExcluirRecepcionistas()
         {
 
         }
     }
 }
-

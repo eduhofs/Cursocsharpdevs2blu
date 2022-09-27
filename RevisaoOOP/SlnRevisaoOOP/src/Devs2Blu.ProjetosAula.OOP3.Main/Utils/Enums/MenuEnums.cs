@@ -22,6 +22,11 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Utils.Enums
         CAD_FOR = 40,
         AGENDA = 50,
         PRONTUARIO = 60,
-        FINANCEIRO = 70
+        FINANCEIRO = 70,
+
+        //Menu Listar
+        TODOS = 11,
+        POR_NOME = 12,
+        POR_CPF = 13
     }
 }
