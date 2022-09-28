@@ -1,196 +1,89 @@
-﻿using Devs2Blu.ProjetosAula.OOP3.Main.Utils;
-using Devs2Blu.ProjetosAula.OOP3.Main.Utils.Enums;
-using Devs2Blu.ProjetosAula.OOP3.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Devs2Blu.ProjetosAula.OOP3.Main.Interfaces;
+using Devs2Blu.ProjetosAula.OOP3.Main.Utils;
+using Devs2Blu.ProjetosAula.OOP3.Main.Utils.Enums;
+using Devs2Blu.ProjetosAula.OOP3.Models;
 
 namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 {
-    public class CadastroPaciente
+    public class CadastroPaciente : IMenuCadastro
     {
-        public CadastroPaciente() { }
-
-        public void MenuCadastro()
+        public CadastroPaciente()
         {
-            Int32 opcao = 0;
 
-            do
-            {
-                Console.Clear();
-                Console.WriteLine("----- Cadastro de Pacientes -----");
-                Console.WriteLine("----- 1- Lista de Pacientes -----");
-                Console.WriteLine("----- 2- Cadastro de Pacientes -----");
-                Console.WriteLine("----- 3- Alterar Pacientes -----");
-                Console.WriteLine("------ 0 - Sair ------\n");
-                Int32.TryParse(Console.ReadLine(), out opcao);
-
-                switch (opcao)
-                {
-                    case (int)MenuEnums.LISTAR:
-                        MenuListarPacientes();
-                        break;
-                    case (int)MenuEnums.CADASTRAR:
-                        CadastrarPaciente();
-                        break;
-                    case (int)MenuEnums.ALTERAR:
-                        AlterarPaciente();
-                        break;
-                    case (int)MenuEnums.EXCLUIR:
-                        ExcluirPaciente();
-                        break;
-                    default:
-                        break;
-                }
-
-            } while (!opcao.Equals((int)MenuEnums.SAIR));
         }
-        #region Eventos
-        public void MenuListarPacientes()
-        {
-            Int32 opcao = 0;
-
-            do
-            {
-                Console.Clear();
-                Console.WriteLine("----- 11- Listar Todos-----");
-                Console.WriteLine("----- 12- Listar Por Nome-----");
-                Console.WriteLine("----- 13- Listar Por CPF-----");
-                Console.WriteLine("------ 0 - Sair ------\n");
-                Int32.TryParse(Console.ReadLine(), out opcao);
-
-                switch (opcao)
-                {
-                    case (int)MenuEnums.TODOS:
-                        ListarPacientes();
-                        break;
-                    case (int)MenuEnums.POR_NOME:
-                        ListarPorNome();
-                        break;
-                    case (int)MenuEnums.POR_CPF:
-                        ListarPorCPF();
-                        break;
-                    default:
-                        break;
-                }
-
-            } while (!opcao.Equals((int)MenuEnums.SAIR));
-           
-        }
-        public void ListarPacientes()
+        private void ListarPacientes()
         {
             Console.Clear();
-            
+
             foreach (Paciente paciente in Program.Mock.ListaPacientes)
             {
-               MostrarPaciente(paciente);
+                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine($"Paciente: {paciente.CodigoPaciente}");
+                Console.WriteLine($"Nome: {paciente.Nome}");
+                Console.WriteLine($"CPF: {paciente.CGCCPF}");
+                Console.WriteLine($"Convenio: {paciente.Convenio}");
+                Console.WriteLine("-----------------------------------------\n");
             }
             Console.ReadLine();
         }
-        public void CadastrarPaciente()
+
+        private void CadastrarPaciente(Paciente novoPaciente)
+        {
+            Program.Mock.ListaPacientes.Add(novoPaciente);
+        }
+
+        private void AlterarPaciente(Paciente paciente)
+        {
+
+        }
+
+        private void ExcluirPaciente(Paciente paciente)
+        {
+
+        }
+
+
+        #region FACADE
+        public Int32 MenuCadastro()
+        {
+            Int32 opcao;
+            Console.Clear();
+            Console.WriteLine("----- Cadastro de Pacientes -----");
+            Console.WriteLine("----- 1- Lista de Pacientes -----");
+            Console.WriteLine("----- 2- Cadastro de Pacientes -----");
+            Console.WriteLine("----- 3- Alterar Pacientes -----");
+            Console.WriteLine("---------------------");
+            Console.WriteLine("----- 0- Sair -----");
+            Int32.TryParse(Console.ReadLine(), out opcao);
+            return opcao;
+        }
+
+        public void Listar()
+        {
+            ListarPacientes();
+        }
+
+        public void Cadastrar()
         {
             Paciente paciente = new Paciente();
-            Paciente pacienteSTR = Program.Mock.ListaPacientes.Last();
-            paciente.CodigoPaciente = pacienteSTR.CodigoPaciente + 1;
-
-            CapturarPaciente(paciente);
-            Program.Mock.ListaPacientes.Add(paciente);
-
-            Console.WriteLine("Paciente Cadastrado Com Sucesso!");
-            Console.ReadLine();
-        }
-        public void AlterarPaciente()
-        {
-            Console.WriteLine("Informe o Código do Paciente: ");
-            Int32.TryParse(Console.ReadLine(), out int codigoSearch);
-
-            foreach (Paciente paciente in Program.Mock.ListaPacientes)
-            {
-                if (paciente.CodigoPaciente.Equals(codigoSearch))
-                {
-                    Console.Clear();
-                    MostrarPaciente(paciente);
-                    Console.WriteLine("Deseja continuar: S/n");
-
-                    string opcao = Console.ReadLine();
-                    if (opcao.ToUpper().Equals("S"))
-                    {
-                        CapturarPaciente(paciente);
-
-                        Console.WriteLine("Paciente Atualizado Com Sucesso!");
-                        Console.ReadLine();
-                    }
-                    else if (opcao.ToUpper().Equals("N"))
-                    {
-                        Console.WriteLine("Operação Cancelada!");
-                        Console.ReadLine();
-                    }
-                }
-             
-            }
-            
-        }
-        public void ExcluirPaciente()
-        {
-
+            CadastrarPaciente(paciente);
         }
 
-        #endregion
-
-        #region Metodos
-
-        public void MostrarPaciente(Paciente paciente)
+        public void Alterar()
         {
-            Console.WriteLine("----------------------------------------\n");
-            Console.WriteLine($"Paciente: {paciente.CodigoPaciente}");
-            Console.WriteLine($"Nome: {paciente.Nome}");
-            Console.WriteLine($"Cpf: {paciente.CGCCPF}");
-            Console.WriteLine($"Convenio: {paciente.Convenio}");
-            Console.WriteLine("----------------------------------------\n");
+            Paciente paciente = new Paciente();
+            AlterarPaciente(paciente);
         }
 
-        public void CapturarPaciente(Paciente paciente)
+        public void Excluir()
         {
-            Console.WriteLine("Informe o Nome do paciente: ");
-            paciente.Nome = Console.ReadLine();
-            Console.WriteLine("Informe o CPF do paciente: ");
-            paciente.CGCCPF = Console.ReadLine();
-            Console.WriteLine("Informe o Plano de Saúde do paciente: ");
-            paciente.Convenio = Console.ReadLine();
-        }
-
-        public void ListarPorNome()
-        {
-            Console.Clear();
-            Console.WriteLine("Informe O Nome Do Paciete: ");
-            string nomePaciente = Console.ReadLine();
-
-            foreach (Paciente paciente in Program.Mock.ListaPacientes)
-            {
-                if (paciente.Nome.Contains(nomePaciente))
-                {
-                    MostrarPaciente(paciente);
-                }
-            }
-            Console.ReadLine();
-        }
-
-        public void ListarPorCPF()
-        {
-            Console.Clear();
-            Console.WriteLine("Informe O CPF Do Paciete: ");
-            string cpfPaciente = Console.ReadLine();
-
-            foreach (Paciente paciente in Program.Mock.ListaPacientes)
-            {
-                if (paciente.CGCCPF.Equals(cpfPaciente))
-                {
-                    MostrarPaciente(paciente);
-                }
-            }
-            Console.ReadLine();
+            Paciente paciente = new Paciente();
+            ExcluirPaciente(paciente);
         }
 
         #endregion
