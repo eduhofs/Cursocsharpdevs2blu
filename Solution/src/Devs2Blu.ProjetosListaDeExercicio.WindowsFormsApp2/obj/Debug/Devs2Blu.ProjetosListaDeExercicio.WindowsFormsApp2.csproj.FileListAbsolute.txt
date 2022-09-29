@@ -1,0 +1,11 @@
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\bin\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.exe.config
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\bin\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.exe
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\bin\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.pdb
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\obj\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.csproj.AssemblyReference.cache
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\obj\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.csproj.SuggestedBindingRedirects.cache
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\obj\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.Properties.Resources.resources
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\obj\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.csproj.GenerateResource.cache
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\obj\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\obj\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.exe
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\obj\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.pdb
+C:\desvs2blu\Solution\src\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2\obj\Debug\Devs2Blu.ProjetosListaDeExercicio.WindowsFormsApp2.Page1.resources

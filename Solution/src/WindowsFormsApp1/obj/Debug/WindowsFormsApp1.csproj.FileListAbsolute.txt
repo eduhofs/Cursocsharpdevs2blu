@@ -1,0 +1,14 @@
+C:\desvs2blu\Solution\src\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\desvs2blu\Solution\src\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\desvs2blu\Solution\src\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProgramaLocao.resources
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Exemplo3.resources
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormQuestao4.resources
+C:\desvs2blu\Solution\src\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Questao6.resources
