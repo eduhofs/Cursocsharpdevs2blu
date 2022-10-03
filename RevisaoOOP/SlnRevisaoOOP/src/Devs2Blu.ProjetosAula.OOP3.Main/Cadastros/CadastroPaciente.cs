@@ -16,6 +16,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         {
 
         }
+
         private void ListarPacientes()
         {
             Console.Clear();
