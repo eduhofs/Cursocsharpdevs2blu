@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Devs2Blu.ProjetosAula.OOP3.Models
+namespace Devs2Blu.ProjetosAula.OOP3.Models.Model
 {
     public class Recepcionista : Pessoa
     {
@@ -17,7 +17,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Models
             TipoPessoa = TipoPessoa.PF;
         }
 
-        public Recepcionista(Int32 codigo, String nome, String cpf,  String setor)
+        public Recepcionista(Int32 codigo, String nome, String cpf, string setor)
         {
             Codigo = codigo;
             Nome = nome;
@@ -26,7 +26,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Models
             Setor = setor;
 
             Random rd = new Random();
-            CodigoRecepcionista = Int32.Parse($"{codigo}{rd.Next(100, 900)}");
+            CodigoRecepcionista = Int32.Parse($"{codigo}{rd.Next(1000, 1100)}");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Devs2Blu.ProjetosAula.OOP3.Main.Interfaces;
 using Devs2Blu.ProjetosAula.OOP3.Main.Utils;
 using Devs2Blu.ProjetosAula.OOP3.Main.Utils.Enums;
-using Devs2Blu.ProjetosAula.OOP3.Models;
+using Devs2Blu.ProjetosAula.OOP3.Models.Model;
 
 namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 {
@@ -16,7 +16,6 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         {
 
         }
-
         private void ListarPacientes()
         {
             Console.Clear();
@@ -47,9 +46,8 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
         private void ExcluirPaciente(Paciente paciente)
         {
-
+            Program.Mock.ListaPacientes.Remove(paciente);
         }
-
         private void ListarPacientesByCodeAndName()
         {
             foreach (Paciente paciente in Program.Mock.ListaPacientes)
@@ -69,7 +67,6 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             Console.WriteLine("----- 1- Lista de Pacientes -----");
             Console.WriteLine("----- 2- Cadastro de Pacientes -----");
             Console.WriteLine("----- 3- Alterar Pacientes -----");
-            Console.WriteLine("----- 4- Excluir Pacientes -----");
             Console.WriteLine("---------------------");
             Console.WriteLine("----- 0- Sair -----");
             Int32.TryParse(Console.ReadLine(), out opcao);
@@ -85,14 +82,13 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         {
             Console.Clear();
             Paciente paciente = new Paciente();
-
-            Console.WriteLine("Informe o nome do Paciente: ");
+            Console.WriteLine("Informe o Nome do Paciente");
             paciente.Nome = Console.ReadLine();
 
-            Console.WriteLine("Informe o CPF do Paciente: ");
+            Console.WriteLine("Informe o CPF do Paciente");
             paciente.CGCCPF = Console.ReadLine();
 
-            Console.WriteLine("Informe o Convênio do Paciente: ");
+            Console.WriteLine("Informe o Convênio do Paciente");
             paciente.Convenio = Console.ReadLine();
 
             Random rd = new Random();
@@ -144,40 +140,20 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
                         break;
                 }
 
-                if (alterar)
+                if(alterar)
                 {
                     Console.Clear();
                     Console.WriteLine("Dado Alterado com Sucesso!");
                 }
             } while (alterar);
+
+            AlterarPaciente(paciente);
         }
 
         public void Excluir()
         {
-            Console.Clear();
-            Paciente paciente;
-
-            int codigoPaciente;
-            ListarPacientesByCodeAndName();
-
-            Console.WriteLine("Informe o Paciente que Deseja Excluir:\n");
-            Int32.TryParse(Console.ReadLine(), out codigoPaciente);
-
-            paciente = Program.Mock.ListaPacientes.Find(p => p.CodigoPaciente == codigoPaciente);
-
-            
-            if (Program.Mock.ListaPacientes.Remove(paciente))
-            {
-                Console.Clear();
-                Console.WriteLine("Dado Excluido com Sucesso!");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("Dado Não Excluido!");
-                Console.ReadLine();
-            }
+            Paciente paciente = new Paciente();
+            ExcluirPaciente(paciente);
         }
 
         #endregion

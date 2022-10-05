@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Devs2Blu.ProjetosAula.OOP3.Models
+namespace Devs2Blu.ProjetosAula.OOP3.Models.Model
 {
     public class Paciente : Pessoa
     {
@@ -26,8 +26,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Models
             Convenio = convenio;
 
             Random rd = new Random();
-            CodigoPaciente = Int32.Parse($"{codigo}{rd.Next(100, 900)}");
-
+            CodigoPaciente = Int32.Parse($"{codigo}{rd.Next(100, 999)}");
         }
     }
 }

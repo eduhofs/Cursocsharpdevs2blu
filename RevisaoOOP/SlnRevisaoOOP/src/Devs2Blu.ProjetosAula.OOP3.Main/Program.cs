@@ -2,6 +2,7 @@
 using Devs2Blu.ProjetosAula.OOP3.Main.Interfaces;
 using Devs2Blu.ProjetosAula.OOP3.Main.Utils;
 using Devs2Blu.ProjetosAula.OOP3.Main.Utils.Enums;
+using Devs2Blu.ProjetosAula.OOP3.Models.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

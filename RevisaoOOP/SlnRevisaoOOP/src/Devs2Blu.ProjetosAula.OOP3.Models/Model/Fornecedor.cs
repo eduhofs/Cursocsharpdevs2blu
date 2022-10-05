@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Devs2Blu.ProjetosAula.OOP3.Models
+namespace Devs2Blu.ProjetosAula.OOP3.Models.Model
 {
     public class Fornecedor : Pessoa
     {
@@ -26,7 +26,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Models
             TipoFornecedor = tipoFornecedor;
 
             Random rd = new Random();
-            CodigoFornecedor = Int32.Parse($"{codigo}{rd.Next(100, 900)}");
+            CodigoFornecedor = Int32.Parse($"{codigo}{rd.Next(3000, 3999)}");
         }
     }
 }
